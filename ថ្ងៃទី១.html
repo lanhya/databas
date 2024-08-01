@@ -1,0 +1,34 @@
+1. Create table
+Create table Person (
+    PersonId int,
+    firstName varchar(255),
+    LastName varchar(255),
+    address varchar(255)
+);
+2. Delete table
+drop table Lanh;
+3. Add field in table 
+alter table Person add Email varchar(255);
+4. Delete field in table 
+alter table Person drop culumn Email;
+5. Not null
+create table Person(
+    id int not null,
+    fname varchar(255) not null,
+    lname varchar(255) not null
+);
+6. Primary key 
+create table Person (
+    id int not null rimary key,
+    lname varchar(255) not null,
+    fname varchar(255) not null,
+)
+
+alter table Persons add constraint PK_Person primary key (id, lname);
+7. Foreing key 
+create table orders (
+    orderId int not null primary key,
+    orderNumber int not null,
+    personId int foreing key references Persons(PersonId)
+);
+
